@@ -1,0 +1,381 @@
+/* Reset + Normalize */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px;
+}
+
+img, svg {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* General */
+
+html, body {
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main";
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 256px auto;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+header {
+  grid-area: header;
+  padding: 20px 105px 50px 32px;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
+
+/* Header */
+
+header, .header__menu, .header__options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__menu {
+ gap: 28px;
+ padding-right: 60px;
+}
+
+.header__search {
+  position: relative;
+}
+
+.header__search input {
+  width: 830px;
+  height: 44px;
+  padding: 12px 31px 12px 23px;
+  border: none;
+  border-radius: 22px;
+  background-color: #EBEBEB;
+  color: #30384C;
+  font-family: inherit;
+  font-size: 16px;
+  opacity: 30%;
+}
+
+.header__search-submit {
+  position: absolute;
+  top: 13px;
+  right: 17px;
+}
+
+.header__options {
+  margin-left: auto;
+  gap: 50px;
+}
+
+.header__options-notifications {
+  position: relative;
+}
+
+.header__options-notifications-amount {
+  position: absolute;
+  top: -6px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #FF0000;
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* Navigation */
+
+.menu__nav {
+  padding-left: 31px;
+  padding-bottom: 58px;
+  color: #898989;
+}
+
+.menu__nav ul li {
+  padding-bottom: 29px;
+}
+
+.menu__nav ul li:nth-child(1) {
+  color: #FF0000;
+}
+
+.menu__nav ul li:nth-child(1),
+.menu__nav ul li:nth-child(2) {
+  padding-bottom: 28px;
+}
+
+.menu__nav ul li:nth-child(3) {
+  padding-bottom: 60px;
+}
+
+.menu__nav ul li a,
+.menu__show-more,
+.menu__subscribers ul li a,
+.menu__settings,
+.channel__header,
+.channel__header-profile,
+.channel__main,
+.channel__main-video-description,
+.recommended__videos-header,
+.recommended__videos-main,
+.recommended__videos-main-video-description,
+.recommended__channels-header,
+.recommended__channels-header-profile,
+.recommended__channels-main,
+.recommended__channels-main-video-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu__nav ul li a {
+  column-gap: 13px;
+}
+
+.menu__nav-container {
+  width: 20px;
+}
+
+.menu__nav-container img {
+  margin: 0 auto;
+}
+
+.menu__subscribers ul li img {
+  width: 26px;
+  height: 26px;
+}
+
+.menu__show-more {
+  column-gap: 16px;
+  padding-left: 4px;
+}
+
+.menu__show-more::before, .menu__settings::before {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.menu__show-more::before {
+  width: 14px;
+  height: 20px;
+  background-image: url("../public/icons/chevron-down.svg");
+}
+
+.menu__subscribers {
+  margin-left: 30px;
+  margin-bottom: 81px;
+}
+
+.menu__subscribers h3 {
+  padding-bottom: 30px;
+  font-size: 18px;
+}
+
+.menu__subscribers ul li {
+  padding-bottom: 23px;
+  color: #898989;
+}
+
+.menu__subscribers ul li a {
+  column-gap: 10px;
+}
+
+.menu__settings {
+  column-gap: 12px;
+  margin-left: 34px;
+  margin-bottom: 40px;
+  color: #898989;
+}
+
+.menu__settings::before {
+  width: 19px;
+  height: 20px;
+  background-image: url("../public/icons/ui-46.svg");
+}
+
+/* Main Content */
+
+.channel {
+  padding-bottom: 49px;
+}
+
+.channel__header {
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.channel__header-profile {
+  column-gap: 20px;
+  padding-bottom: 30px;
+}
+
+.channel__header-profile h2 {
+  font-size: 26px;
+}
+
+.channel__main, .recommended__videos-main, .recommended__channels-main {
+  gap: 40px;
+}
+
+.channel__main-video, .recommended__videos-main-video, .recommended__channels-main-video {
+  position: relative;
+}
+
+.time {
+  position: absolute;
+  width: 47px;
+  height: 24px;
+  right: 10px;
+  bottom: 60px;
+  padding: 3px 9px;
+  color: #FFFFFF;
+  font-size: 14px;
+  background-color: #000000;
+  border-radius: 12px;
+  opacity: 30%;
+}
+
+h4 {
+  padding: 10px 0 4px 0;
+  font-size: 16px;
+}
+
+.channel__main-video-description, .recommended__videos-main-video-description, .recommended__channels-main-video-description {
+  justify-content: space-between;
+  font-size: 13px;
+  color: #C2C2C2;
+  white-space: pre;
+}
+
+.recommended__videos {
+  padding-bottom: 50px;
+}
+
+.recommended__videos-main-video-description {
+  font-size: 12px;
+}
+
+.recommended__videos-header {
+  justify-content: space-between;
+}
+
+.recommended__videos-header h2 {
+  padding-bottom: 30px;
+  font-size: 26px;
+}
+
+.recommended__videos-main-video h4 {
+  padding: 10px 0 5px;
+}
+
+.recommended__channels-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.recommended__channels-subscribe {
+  padding: 10px 20px;
+  margin-right: 40px;
+  background-color: #FF0000;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #FFFFFF
+}
+
+.recommended__channels-header {
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.recommended__channels-header-profile h2 {
+  padding: 0 20px 2px 20px;
+  font-size: 26px;
+}
+
+.recommended__channels-header-profile p {
+  font-size: 16px;
+  color: #C2C2C2;
+}
+
+/* Controls */
+
+.channel__header-controls, .recommended__videos-header-controls, .recommended__channels-header-controls {
+  display: flex;
+  gap: 10px;
+  margin-right: 185px;
+}
+
+.recommended__videos-header-controls {
+ padding-bottom: 28px;
+}
+
+.channel__header-controls-left,
+.recommended__videos-header-controls-left,
+.recommended__channels-header-controls-left {
+  width: 28px;
+  height: 28px;
+  content: '';
+  background-image: url("../public/icons/Left.svg");
+  background-repeat: no-repeat;
+}
+
+.channel__header-controls-right,
+.recommended__videos-header-controls-right,
+.recommended__channels-header-controls-right {
+  width: 28px;
+  height: 28px;
+  content: '';
+  background-image: url("../public/icons/Right.svg");
+  background-repeat: no-repeat;
+}
