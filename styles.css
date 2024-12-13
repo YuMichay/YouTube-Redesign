@@ -182,6 +182,10 @@ header, .header__menu, .header__options {
   width: 20px;
 }
 
+.menu__nav-container:nth-child(1) {
+  color: #FF0000;
+}
+
 .menu__nav-container img {
   margin: 0 auto;
 }
@@ -207,6 +211,10 @@ header, .header__menu, .header__options {
   width: 14px;
   height: 20px;
   background-image: url("../public/icons/chevron-down.svg");
+}
+
+.menu__nav-phones {
+  display: none;
 }
 
 .menu__subscribers {
@@ -241,7 +249,7 @@ header, .header__menu, .header__options {
   background-image: url("../public/icons/ui-46.svg");
 }
 
-/* Main Content */
+/* Main Content Home Page */
 
 .channel {
   padding-bottom: 49px;
@@ -378,4 +386,101 @@ h4 {
   content: '';
   background-image: url("../public/icons/Right.svg");
   background-repeat: no-repeat;
+}
+
+/* Adaptive for Home Page */
+
+@media (max-width: 320px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "aside";
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto;
+    padding: 10px 16px 10px 16px;
+  }
+
+  .header__menu-burger,
+  .header__search input,
+  .header__options-camera,
+  .header__options-view,
+  .header__options-notifications,
+  .menu__nav,
+  .menu__subscribers,
+  .menu__settings,
+  .channel__header,
+  .recommended__videos,
+  .recommended__channels {
+    display: none;
+  }
+
+  header {
+    padding: 0 0 19px 0;
+  }
+
+  .header__menu {
+    padding-right: 99px;
+  }
+
+  .header__search-submit {
+    position: static;
+  }
+
+  .header__options-profile img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .menu__nav-phones {
+    position: fixed;
+    width: 320px;
+    height: 61px;
+    padding: 0 25px;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #FFFFFF;
+    font-size: 10px;
+    color: #898989;
+    z-index: 1;
+  }
+
+  .menu__nav-phones ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 33px;
+  }
+
+  .menu__nav-phones ul li:nth-child(1) {
+    color: #FF0000;
+  }
+
+  .menu__nav-phones ul li:nth-child(2) {
+    margin-left: 10px;
+  }
+
+  .menu__nav-phones ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu__nav-container img {
+    padding-bottom: 4px;
+  }
+
+  .channel__main {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .channel__main-video img {
+    width: 288px;
+    height: 150px;
+  }
 }
