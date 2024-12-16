@@ -12,12 +12,15 @@
 </head>
 <body>
   <header>
-    <div class="header__menu">
+    <div class="header__menu channel__header-menu">
       <button class="header__menu-burger">
         <img src="./public/icons/Menu.svg" alt="burger menu">
       </button>
-      <button class="header__menu-logo">
-        <img src="./public/icons/Black.svg" alt="logo home">
+      <button class="header__menu-logo channel-logo">
+        <picture>
+          <source srcset="./public/icons/Shape.svg" media="(max-width: 320px)">
+          <img src="./public/icons/Black.svg" alt="logo home">
+        </picture> 
       </button>
     </div>
     <div class="header__search">
@@ -27,7 +30,7 @@
         <img src="./public/icons/search.svg" alt="search submit" width="19px" height="19px">
       </button>
     </div>
-    <div class="header__options">
+    <div class="header__options header__options-channel">
       <button class="header__options-camera">
         <img src="./public/icons/phone-18.svg" alt="camera" width="27px" height="20px">
       </button>
@@ -41,6 +44,9 @@
       <button class="header__options-profile">
         <img src="./public/images/Userpic.png" alt="your profile photo">
       </button>
+    </div>
+    <div class="header__options-phone">
+      <img src="./public/icons/menu-phone.svg" alt="options">
     </div>
   </header>
   <aside class="menu">
@@ -124,7 +130,10 @@
   </aside>
   <main>
     <div class="channel__profile">
-      <img src="./public/images/Profile-Cover.png" alt="profile cover">
+      <picture>
+        <source srcset="./public/images/CoverPhone.png" media="(max-width: 320px)">
+        <img src="./public/images/Profile-Cover.png" alt="profile cover">
+      </picture> 
       <div class="channel__profile-header">
         <img src="./public/images/channel-profile-photo.png" alt="profile photo">
         <div class="channel__profile-header-info">
@@ -147,6 +156,7 @@
           <li>Discussion</li>
           <li>About</li>
           <li><img src="./public/icons/search.svg" alt="search videos"></li>
+          <li><img src="./public/icons/show-more.svg" alt="show more"></li>
         </ul>
       </div>
       <div class="channel__menu-recommended">

@@ -129,6 +129,10 @@ header, .header__menu, .header__options {
   text-align: center;
 }
 
+.header__options-phone {
+  display: none;
+}
+
 /* Navigation */
 
 .menu__nav {
@@ -594,6 +598,10 @@ h4 {
   background-color: #FF0000;
 }
 
+.channel__menu-options ul li:nth-child(8) {
+  display: none;
+}
+
 .channel__menu-recommended {
   padding-top: 11px;
   padding-left: 10px;
@@ -663,4 +671,141 @@ h4 {
 
 .channel__videos-header-controls {
   padding-top: 2px;
+}
+
+@media (max-width: 320px) {
+  .header__options-channel,
+  .channel__menu-options ul li:nth-child(4),
+  .channel__menu-options ul li:nth-child(5),
+  .channel__menu-options ul li:nth-child(6),
+  .channel__menu-options ul li:nth-child(7) {
+    display: none;
+  }
+
+  .header__options-phone {
+    display: block;
+    padding-left: 45px;
+  }
+
+  .channel-logo {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .channel-logo::after {
+    content: "Margaret Phelps";
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #19202C;
+  }
+
+  .channel__header-menu {
+    padding-right: 42px;
+  }
+
+  .header__search-submit {
+    padding-top: 4px;
+  }
+
+  .channel__profile {
+    position: relative;
+    padding-top: 23px;
+  }
+
+  .channel__profile picture img {
+    margin-left: -16px;
+  }
+
+  .channel__profile-header {
+    position: absolute;
+    top: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .channel__profile-header img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .channel__profile-header-info {
+    padding-left: 0;
+  }
+
+  .channel__profile-header-info h2 {
+    font-size: 20px;
+  }
+
+  .channel__profile-header-info p {
+    padding-top: 4px;
+    font-size: 12px;
+  }
+
+  .channel__profile-info-subscribe {
+    font-size: 12px;
+    padding: 10px 17px 9px;
+  }
+
+  .channel__menu-recommended, .channel__preview-video, .channel__videos-header {
+    display: none;
+  }
+
+  .channel__videos {
+    width: 288px;
+  }
+
+  .channel__videos-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .channel__menu {
+    margin-top: 165px;
+    margin-left: -13px;
+    padding-bottom: 21px;
+  }
+
+  .channel__menu-options ul li:first-child::after {
+    width: 50px;
+    left: -3px;
+    right: 10%;
+    bottom: -5px;
+  }
+
+  .channel__menu ul {
+    width: 272px;
+    padding: 0 0 0 13px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 14px;
+  }
+
+  .channel__menu-options ul li {
+    font-size: 14px;
+  }
+
+  .channel__menu-options ul li:nth-child(8) {
+    display: block;
+  }
+
+  .channel__profile-header-options {
+    margin-top: 20px;
+  }
+
+  .channel__profile-header-options img {
+    display: none;
+  }
+
+  .channel__video img {
+    width: 288px;
+    height: 150px;
+  }
+
+  .channel__video h4 {
+    padding-top: 9px;
+  }
 }
