@@ -1,0 +1,752 @@
+/* Reset + Normalize */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px;
+  font-family: "Mulish", sans-serif;
+}
+
+img, svg {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* General */
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main";
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 255px auto;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+header {
+  grid-area: header;
+  padding: 20px 105px 0 32px;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
+
+header,
+.flex,
+.menu__nav ul li a,
+.menu__subscribers ul li a,
+.recommended__channels-options,
+.channel__menu-recommended ul li a,
+.channel__videos-container,
+.channel__video-description,
+.channel__profile-header,
+.channel__profile-header-options,
+.channel__videos-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__search,
+.header__options-notifications,
+.channel__main-video,
+.recommended__videos-main-video,
+.recommended__channels-main-video,
+.channel__video,
+.channel__preview-video {
+  position: relative;
+}
+
+h4 {
+  padding: 10px 0 4px 0;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+/* Header */
+
+.header__menu {
+ gap: 28px;
+ padding-right: 60px;
+}
+
+.header__search input {
+  width: 830px;
+  height: 44px;
+  padding: 12px 31px 12px 23px;
+  border: none;
+  border-radius: 22px;
+  background-color: #EBEBEB;
+  color: #30384C;
+  font-family: inherit;
+  font-size: 16px;
+  opacity: 30%;
+}
+
+.header__search-submit {
+  position: absolute;
+  top: 13px;
+  right: 17px;
+}
+
+.header__options {
+  margin-left: auto;
+  gap: 50px;
+}
+
+.header__options-notifications-amount {
+  position: absolute;
+  top: -6px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  padding: 1px 6px;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #FF0000;
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* Navigation */
+
+.menu__nav {
+  padding: 50px 0 58px 32px;
+  color: #898989;
+}
+
+.menu__nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__nav ul li:nth-child(1) {
+  color: #FF0000;
+}
+
+.menu__nav ul li:nth-child(1), .menu__nav ul li:nth-child(2), .menu__nav ul li:nth-child(3) {
+  padding-bottom: 28px;
+}
+
+.menu__nav ul li.only1920 {
+  padding-top: 29px;
+}
+
+.extra-padding {
+  padding-top: 32px;
+}
+
+.menu__nav ul li a {
+  column-gap: 13px;
+}
+
+.menu__nav-container {
+  width: 20px;
+}
+
+.menu__nav-container img {
+  margin: 0 auto;
+}
+
+.menu__show-more {
+  column-gap: 16px;
+  padding-top: 28px;
+  padding-left: 3px;
+}
+
+.menu__show-more::before, .menu__settings::before {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.menu__show-more::before {
+  width: 14px;
+  height: 20px;
+  background-image: url("./icons/chevron-down.svg");
+}
+
+.menu__subscribers ul li img {
+  width: 26px;
+  height: 26px;
+}
+
+.menu__subscribers {
+  padding-left: 30px;
+  padding-bottom: 81px;
+}
+
+.menu__subscribers h3 {
+  padding-bottom: 30px;
+  font-size: 18px;
+}
+
+.menu__subscribers ul li {
+  padding-bottom: 23px;
+  color: #898989;
+}
+
+.menu__subscribers ul li a {
+  column-gap: 10px;
+}
+
+.menu__settings {
+  column-gap: 12px;
+  margin-left: 34px;
+  margin-bottom: 40px;
+  color: #898989;
+}
+
+.menu__settings::before {
+  width: 19px;
+  height: 20px;
+  background-image: url("./icons/ui-46.svg");
+}
+
+/* Main Content Home Page */
+
+.channel {
+  padding-top: 50px;
+  padding-bottom: 49px;
+}
+
+.channel__header, .channel__videos-header, .recommended__videos-header {
+  justify-content: space-between;
+}
+
+.channel__header {
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.channel__header-profile {
+  column-gap: 20px;
+}
+
+.channel__main,
+.recommended__videos-main,
+.recommended__channels-main,
+.channel__videos-container {
+  gap: 40px;
+}
+
+.time {
+  position: absolute;
+  width: 47px;
+  height: 24px;
+  right: 10px;
+  bottom: 60px;
+  padding: 3px 9px;
+  color: #FFFFFF;
+  font-size: 14px;
+  background-color: #000000;
+  border-radius: 12px;
+  opacity: 30%;
+}
+
+.channel__main-video-description, 
+.recommended__videos-main-video-description, 
+.recommended__channels-main-video-description,
+.channel__video-description {
+  justify-content: space-between;
+  font-size: 13px;
+  color: #C2C2C2;
+  white-space: pre;
+}
+
+.recommended__videos {
+  padding-bottom: 48px;
+}
+
+.recommended__videos-main-video-description {
+  padding-top: 1px;
+  font-size: 12px;
+}
+
+.recommended__videos-header h2 {
+  padding-bottom: 30px;
+}
+
+.recommended__channels-options {
+  padding-top: 18px;
+}
+
+.recommended__channels-subscribe, .channel__profile-info-subscribe {
+  padding: 10px 20px;
+  margin-right: 40px;
+  background-color: #FF0000;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.recommended__channels-header {
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.recommended__channels-header-profile h2 {
+  padding: 0 20px 2px 20px;
+}
+
+.recommended__channels-header-profile p {
+  padding-top: 4px;
+  font-size: 16px;
+  color: #C2C2C2;
+}
+
+/* Controls */
+
+.channel__header-controls, 
+.recommended__videos-header-controls, 
+.recommended__channels-header-controls,
+.channel__videos-header-controls {
+  display: flex;
+  gap: 10px;
+  margin-right: 185px;
+}
+
+.recommended__videos-header-controls {
+ padding-bottom: 27px;
+}
+
+.channel__header-controls-left,
+.recommended__videos-header-controls-left,
+.recommended__channels-header-controls-left,
+.channel__videos-header-controls-left {
+  width: 28px;
+  height: 28px;
+  content: '';
+  background-image: url("./icons/Left.svg");
+  background-repeat: no-repeat;
+}
+
+.channel__header-controls-right,
+.recommended__videos-header-controls-right,
+.recommended__channels-header-controls-right,
+.channel__videos-header-controls-right {
+  width: 28px;
+  height: 28px;
+  content: '';
+  background-image: url("./icons/Right.svg");
+  background-repeat: no-repeat;
+}
+
+/* Adaptive for Home Page */
+
+@media (max-width: 320px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 16px 10px 16px;
+  }
+
+  .only1920 {
+    display: none;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  .header__menu {
+    padding-right: 99px;
+  }
+
+  .header__search-submit {
+    position: static;
+  }
+
+  .header__options-profile img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .menu__nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 320px;
+    height: 61px;
+    padding: 0 25px;
+    background-color: #FFFFFF;
+    font-size: 10px;
+    color: #898989;
+    z-index: 1;
+  }
+
+  .menu__nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 31px;
+  }
+
+  .menu__nav.home ul li:nth-child(1) {
+    color: #FF0000;
+  }
+
+  .menu__nav ul li:nth-child(2) {
+    margin-left: 15px;
+  }
+
+  .menu__nav ul li:last-child {
+    margin-left: 5px;
+  }
+
+  .menu__nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu__nav-container img {
+    padding-bottom: 4px;
+  }
+
+  .channel {
+    padding-top: 19px;
+  }
+
+  .channel__main {
+    flex-direction: column;
+    gap: 29px;
+  }
+
+  .channel__main-video img {
+    width: 288px;
+    height: 150px;
+  }
+}
+
+/* Channel Page */
+
+.channel__profile, .channel__profile-header {
+  padding-top: 30px;
+}
+
+.channel__profile-header-options {
+  padding-right: 66px;
+  align-self: flex-start;
+  margin-left: auto;
+}
+
+.channel__profile-header-options img {
+  margin-right: 20px;
+}
+
+.header__options-phone {
+  display: none;
+}
+
+.channel__profile-header-info {
+  padding-left: 13px;
+}
+
+.channel__profile-header-info h2, .channel__videos-header h2 {
+  color: #19202C;
+}
+
+.channel__profile-header-info p {
+  font-size: 13px;
+  color: #C2C2C2;
+}
+
+.channel__menu {
+  display: grid;
+  grid-template-areas:
+  "profile profile recommended"
+  "video video recommended";
+  grid-template-rows: auto auto;
+  grid-template-columns: 1120px auto;
+  padding-bottom: 61px;
+}
+
+.channel__menu-options {
+  grid-area: profile;
+}
+
+.channel__menu-recommended {
+  grid-area: recommended;
+}
+
+.channel__preview-video {
+  grid-area: video;
+}
+
+.channel__menu-options ul {
+  display: flex;
+  justify-content: space-between;
+  width: 829px;
+  padding-top: 19px;
+  padding-bottom: 59px;
+}
+
+.channel__menu-options ul li {
+  font-size: 18px;
+}
+
+.channel__menu-options ul li:first-child {
+  position: relative;
+  font-weight: bold;
+  color: #FF0000;
+}
+
+.channel__menu-options ul li:first-child::after {
+  width: 60px;
+  content: "";
+  position: absolute;
+  left: -5px;
+  right: 10%;
+  bottom: -5px;
+  height: 2px;
+  background-color: #FF0000;
+}
+
+.channel__menu-options ul li:nth-child(8) {
+  display: none;
+}
+
+.channel__menu-recommended {
+  padding-top: 22px;
+  padding-left: 16px;
+}
+
+.channel__menu-recommended h3 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #C2C2C2;
+  padding-bottom: 30px;
+}
+
+.channel__menu-recommended ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.channel__menu-recommended ul li a {
+  gap: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #19202C;
+}
+
+.channel__preview-video {
+  width: 1120px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.channel__preview-video .time {
+  right: 590px;
+  bottom: 10px;
+}
+
+.channel__preview-video-description h3 {
+  width: 431px;
+  height: 68px;
+  font-size: 26px;
+  line-height: 34px;
+  color: #19202C;
+}
+
+.channel__preview-video-description p:nth-child(2) {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  line-height: 22px;
+}
+
+.channel__preview-video-description p:last-child {
+  color: #C2C2C2;
+  white-space: pre;
+}
+
+.channel__videos-header {
+  padding-bottom: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.channel__videos-header h2 {
+  padding-left: 4px;
+}
+
+.channel__videos-header-controls {
+  padding-top: 5px;
+}
+
+/* Adaptive for Channel Page */
+
+@media (max-width: 320px) {
+  .header__options-phone {
+    display: block;
+    padding-left: 45px;
+  }
+
+  .channel-logo {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .channel-logo::after {
+    content: "Margaret Phelps";
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #19202C;
+  }
+
+  .channel__header-menu {
+    padding-right: 42px;
+  }
+
+  .header__search-submit {
+    padding-top: 4px;
+  }
+
+  .channel__profile {
+    position: relative;
+    padding-top: 23px;
+  }
+
+  .channel__profile picture img {
+    margin-left: -16px;
+  }
+
+  .channel__profile-header {
+    position: absolute;
+    top: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .channel__profile-header img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .channel__profile-header-info {
+    padding-left: 0;
+  }
+
+  .channel__profile-header-info h2 {
+    font-size: 20px;
+  }
+
+  .channel__profile-header-info p {
+    padding-top: 4px;
+    font-size: 12px;
+  }
+
+  .channel__profile-info-subscribe {
+    font-size: 12px;
+    padding: 10px 17px 9px;
+  }
+
+  .channel__videos {
+    width: 288px;
+  }
+
+  .channel__videos-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    padding-bottom: 70px;
+  }
+
+  .channel__menu {
+    margin-top: 165px;
+    margin-left: -13px;
+    padding-bottom: 21px;
+  }
+
+  .channel__menu-options ul li:first-child::after {
+    width: 50px;
+    left: -3px;
+    right: 10%;
+    bottom: -5px;
+  }
+
+  .channel__menu {
+    display: flex;
+  }
+
+  .channel__menu ul {
+    width: 272px;
+    padding: 0 0 0 13px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 14px;
+  }
+
+  .channel__menu-options ul li {
+    font-size: 14px;
+  }
+
+  .channel__menu-options ul li:nth-child(8) {
+    display: block;
+  }
+
+  .channel__profile-header-options {
+    margin-top: 20px;
+  }
+
+  .channel__profile-header-options img, .channel__preview-video {
+    display: none;
+  }
+
+  .channel__video img {
+    width: 288px;
+    height: 150px;
+  }
+}

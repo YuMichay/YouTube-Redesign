@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube</title>
+  <link rel="icon" href="./icons/Shape.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <div class="header__menu flex">
+      <button class="header__menu-burger only1920">
+        <img src="./icons/Menu.svg" alt="burger menu">
+      </button>
+      <button>
+        <img src="./icons/Black.svg" alt="logo home">
+      </button>
+    </div>
+    <div class="header__search">
+      <label for="video-search"></label>
+      <input type="text" name="search" id="video-search" class="only1920" placeholder="Search">
+      <button class="header__search-submit">
+        <img src="./icons/search.svg" alt="search submit" width="19px" height="19px">
+      </button>
+    </div>
+    <div class="header__options flex">
+      <button class="header__options-camera only1920">
+        <img src="./icons/phone-18.svg" alt="camera" width="27px" height="20px">
+      </button>
+      <button class="header__options-view only1920">
+        <img src="./icons/CombinedShape.svg" alt="change video grid" width="21px" height="21px">
+      </button>
+      <button class="header__options-notifications only1920">
+        <img src="./icons/ui-11.svg" alt="notifications" width="22px" height="26px">
+        <div class="header__options-notifications-amount">3</div>
+      </button>
+      <button class="header__options-profile">
+        <img src="./images/Userpic.png" alt="your profile photo">
+      </button>
+    </div>
+  </header>
+  <aside>
+    <nav class="menu__nav">
+      <ul>
+        <li class="menu__nav-main"><a href="./home.html">
+          <div class="menu__nav-container">
+            <img src="./icons/ui-71.svg" alt="home icon">
+          </div>Home</a></li>
+        <li class="menu__nav-main"><a href="#">
+          <div class="menu__nav-container">
+            <img src="./icons/ui-01.svg" alt="trending icon">
+          </div>Trending</a></li>
+        <li class="menu__nav-main"><a href="#">
+          <div class="menu__nav-container">
+            <img src="./icons/ui-45.svg" alt="subscriptions icon">
+          </div>Subscriptions</a></li>
+        <li class="menu__nav-main extra-padding"><a href="#">
+          <div class="menu__nav-container">
+            <img src="./icons/documents-11.svg" alt="library icon">
+          </div>Library</a></li>
+        <li class="only1920"><a href="#">
+          <div class="menu__nav-container">
+            <img src="./icons/others-07.svg" alt="history icon">
+          </div>History</a></li>
+        <li class="only1920"><a href="#">
+          <div class="menu__nav-container">
+            <img src="./icons/tech-25.svg" alt="watch later icon">
+          </div>Watch later</a></li>
+        <li class="only1920"><a href="#">
+          <div class="menu__nav-container">
+            <img src="./icons/ui-02.svg" alt="favourites icon">
+          </div>Favourites</a></li>
+        <li class="only1920"><a href="#">
+          <div class="menu__nav-container">
+            <img src="./icons/ui-03.svg" alt="liked icon">
+          </div>Liked videos</a></li>
+        <li class="only1920"><a href="#">
+          <div class="menu__nav-container">
+            <img src="./icons/ui-80.svg" alt="music icon">
+          </div>Music</a></li>
+        <li class="only1920"><a href="#">
+          <div class="menu__nav-container">
+            <img src="./icons/tech-02.svg" alt="games icon">
+          </div>Games</a></li>
+      </ul>
+      <button class="menu__show-more flex only1920">Show more</button>
+    </nav>
+    <section class="menu__subscribers only1920">
+      <h3>Subscriptions</h3>
+      <ul>
+        <li><a href="./channel.html"><img src="./images/Oval.png" alt="Gussie Singleton photo">Gussie Singleton</a></li>
+        <li><a href="./channel.html"><img src="./images/Oval-0.png" alt="Nora Francis photo">Nora Francis</a></li>
+        <li><a href="./channel.html"><img src="./images/Oval-1.png" alt="Belle Briggs photo">Belle Briggs</a></li>
+        <li><a href="./channel.html"><img src="./images/Oval-2.png" alt="Eunice Cortez photo">Eunice Cortez</a></li>
+        <li><a href="./channel.html"><img src="./images/Oval-3.png" alt="Emma Hanson photo">Emma Hanson</a></li>
+        <li><a href="./channel.html"><img src="./images/Oval-4.png" alt="Leah Berry photo">Leah Berry</a></li>
+      </ul>
+    </section>
+    <button class="menu__settings flex only1920">Setting</button>
+  </aside>
+  <main>
+    <section class="channel">
+      <div class="channel__header flex only1920">
+        <div class="channel__header-profile flex">
+          <img src="./images/Oval.png" alt="profile photo Dollie Blair">
+          <h2>Dollie Blair</h2>
+        </div>
+        <div class="channel__header-controls">
+          <button class="channel__header-controls-left"></button>
+          <button class="channel__header-controls-right"></button>
+        </div>
+      </div>
+      <div class="channel__main flex">
+        <div class="channel__main-video">
+          <a href="/"><img src="./images/Cover.png" alt="video1"></a>
+          <p class="time">4:15</p>
+          <h4>A Brief History Of Creation</h4>
+          <div class="channel__main-video-description flex">
+            <p>80k views  ·  3 days ago</p>
+            <p>Dollie Blair</p>
+          </div>
+        </div>
+        <div class="channel__main-video">
+          <a href="/"><img src="./images/Cover1.png" alt="video2"></a>
+          <p class="time">8:00</p>
+          <h4>Selecting The Right Hotel</h4>
+          <div class="channel__main-video-description flex">
+            <p>123k views  ·  1 months ago</p>
+            <p>Dollie Blair</p>
+          </div>
+        </div>
+        <div class="channel__main-video">
+          <a href="/"><img src="./images/Cover2.png" alt="video3"></a>
+          <p class="time">5:32</p>
+          <h4>Asteroids</h4>
+          <div class="channel__main-video-description flex">
+            <p>43k views  ·  12 days ago</p>
+            <p>Dollie Blair</p>
+          </div>
+        </div>
+        <div class="channel__main-video">
+          <a href="/"><img src="./images/Cover3.png" alt="video4"></a>
+          <p class="time">6:40</p>
+          <h4>Telescopes 101</h4>
+          <div class="channel__main-video-description flex">
+            <p>11k views  ·  6 months ago</p>
+            <p>Dollie Blair</p>
+          </div>
+        </div>
+        <div class="channel__main-video">
+          <a href="/"><img src="./images/Cover4.png" alt="video5"></a>
+          <p class="time">1:45</p>
+          <h4>Medical Care Is Just</h4>
+          <div class="channel__main-video-description flex">
+            <p>18k views  ·  2 days ago</p>
+            <p>Dollie Blair</p>
+          </div>
+        </div>
+        <div class="channel__main-video">
+          <a href="/"><img src="./images/Cover5.png" alt="video6"></a>
+          <p class="time">2:12</p>
+          <h4>Moon Gazing</h4>
+          <div class="channel__main-video-description flex">
+            <p>67k views  ·  4 months ago</p>
+            <p>Dollie Blair</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recommended__videos only1920">
+      <div class="recommended__videos-header flex">
+        <h2>Recommended</h2>
+        <div class="recommended__videos-header-controls">
+          <button class="recommended__videos-header-controls-left"></button>
+          <button class="recommended__videos-header-controls-right"></button>
+        </div>
+      </div>
+      <div class="recommended__videos-main flex">
+        <div class="recommended__videos-main-video">
+          <a href="/"><img src="./images/CoverRV.png" alt="recommended video1"></a>
+          <p class="time">3:40</p>
+          <h4>Dude You Re Getting A Telescope</h4>
+          <div class="recommended__videos-main-video-description flex">
+            <p>34k views  ·  5 months ago</p>
+            <p>Gussie French</p>
+          </div>
+        </div>
+        <div class="recommended__videos-main-video">
+          <a href="/"><img src="./images/Cover-1RV.png" alt="recommended video2"></a>
+          <p class="time">2:12</p>
+          <h4>Moon Gazing</h4>
+          <div class="recommended__videos-main-video-description flex">
+            <p>54k views  ·  11 months ago</p>
+            <p>Edward Osborne</p>
+          </div>
+        </div>
+        <div class="recommended__videos-main-video">
+          <a href="/"><img src="./images/Cover-2RV.png" alt="recommended video3"></a>
+          <p class="time">2:12</p>
+          <h4>Moon Gazing</h4>
+          <div class="recommended__videos-main-video-description flex">
+            <p>125k views  ·  4 months ago</p>
+            <p>Dollie Blair</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="only1920">
+      <div class="recommended__channels-header flex">
+        <div class="recommended__channels-header-profile flex">
+          <a href="/channel.html"><img src="./icons/FDLogo.svg" alt="channel logo"></a>
+          <h2>Food & Drink</h2>
+          <p>Recommended channel for you</p>
+        </div>
+        <div class="recommended__channels-options">
+          <button class="recommended__channels-subscribe">Subscribe 2.3m</button>
+          <div class="recommended__channels-header-controls">
+            <button class="recommended__channels-header-controls-left"></button>
+            <button class="recommended__channels-header-controls-right"></button>
+          </div>
+        </div>
+      </div>
+      <div class="recommended__channels-main flex">
+        <div class="recommended__channels-main-video">
+          <a href="/"><img src="./images/CoverFD.png" alt="recommended channel video1"></a>
+          <p class="time">7:36</p>
+          <h4>Astronomy Or Astrology</h4>
+          <div class="recommended__channels-main-video-description flex">
+            <p>240k views  ·  4 months ago</p>
+            <p>Food & Drink</p>
+          </div>
+        </div>
+        <div class="recommended__channels-main-video">
+          <a href="/"><img src="./images/Cover-1FD.png" alt="recommended channel video2"></a>
+          <p class="time">2:19</p>
+          <h4>Advertising Outdoors</h4>
+          <div class="recommended__channels-main-video-description flex">
+            <p>13k views  ·  15 days ago</p>
+            <p>Food & Drink</p>
+          </div>
+        </div>
+        <div class="recommended__channels-main-video">
+          <a href="/"><img src="./images/Cover-2FD.png" alt="recommended channel video3"></a>
+          <p class="time">9:05</p>
+          <h4>Radio Astronomy</h4>
+          <div class="recommended__channels-main-video-description flex">
+            <p>1k views  ·  11 months ago</p>
+            <p>Food & Drink</p>
+          </div>
+        </div>
+        <div class="recommended__channels-main-video">
+          <a href="/"><img src="./images/Cover-3FD.png" alt="recommended channel video4"></a>
+          <p class="time">3:40</p>
+          <h4>A Good Autoresponder</h4>
+          <div class="recommended__channels-main-video-description flex">
+            <p>45k views  ·  2 months ago</p>
+            <p>Food & Drink</p>
+          </div>
+        </div>
+        <div class="recommended__channels-main-video">
+          <a href="/"><img src="./images/Cover-4FD.png" alt="recommended channel video5"></a>
+          <p class="time">1:56</p>
+          <h4>Baby Monitor Technology</h4>
+          <div class="recommended__channels-main-video-description flex">
+            <p>86k views  ·  7 days ago</p>
+            <p>Food & Drink</p>
+          </div>
+        </div>
+        <div class="recommended__channels-main-video">
+          <a href="/"><img src="./images/Cover-5FD.png" alt="recommended channel video6"></a>
+          <p class="time">4:15</p>
+          <h4>Asteroids</h4>
+          <div class="recommended__channels-main-video-description flex">
+            <p>123k views  ·  4 months ago</p>
+            <p>Dollie Blair</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
